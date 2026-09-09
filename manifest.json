@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Project@Lab",
+    "description": "An improvemnt on the Project site app",
+    "version": "1.0.0",
+    "web_accessible_resources": [{
+        "resources": ["pictures/lab_logo.png","pictures/bronnen.png","pictures/classroom.png","pictures/instructie.png","pictures/succescriteria.png","pictures/voorkennis.png"],
+        "matches": ["https://project.apps4lab.be/*"]
+    }],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://project.apps4lab.be/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}

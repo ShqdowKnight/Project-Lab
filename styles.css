@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+.sidebar,
+.sidebar button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+.logo-container {
+    margin-bottom: 75px;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    transform: scale(2) translateY(20px);
+}
+body {
+  background: #f5f5f5;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: #222;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar > ul {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+/* Chrome / Edge / Chromium */
+.sidebar > ul::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar > ul::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar > ul::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+}
+
+.sidebar > ul::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+  width: 100%;
+  max-width: 120px;
+  margin: 0 auto 25px;
+  display: block;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  padding: 10px 5px 10px 25px;
+
+  background: none;
+  border: none;
+  color: white;
+
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Chevron arrow, no tail */
+.arrow {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 10px;
+  top: calc(50% - 6px);
+  transition: transform 0.4s ease;
+}
+
+.sidebar button.open .arrow {
+  transform: rotate(-135deg);
+}
+
+/* Submenu */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+.submenu.open {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: max-height 0.8s ease, opacity 0.8s ease, transform 0.8s ease;
+}
+
+.submenu button {
+  padding-left: 40px;
+}
+
+.arrow:hover {
+  border-color: #6fb3f2;
+}
+/*Header Bars*/
+.header-bar {
+    margin-left: calc(330px - 3vw);
+    width: calc(100% - (330px - 3vw));
+
+    min-height: 100px;
+    height: auto;
+
+    background: #6fb3f2;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    padding: 15px 25px;
+
+    color: white;
+    font-size: 26px;
+    font-weight: 510;
+
+    overflow-wrap: break-word;
+}
+.header-bar span {
+  margin-left: calc(80% - 50vw);
+}
+
+.succescriteria-text {
+    margin-left: calc(330px - 3vw);
+    width: calc(100% - (330px - 3vw));
+
+    min-height: 75px;
+    height: auto;
+
+  
+    box-sizing: border-box;
+
+
+    align-items: center;
+
+    padding: 15px 25px;
+    font-size: 15px;
+
+    color: black;
+
+    overflow-wrap: break-word;
+}
+
+.succescriteria-text > ul {
+  font-size: 17px;
+  margin-left: calc(85% - 50vw);
+  list-style: none;
+  align-items: center;
+}
+
+.succescriteria-text > span {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  margin-left: calc(85% - 50vw);
+  font-size: 16px;
+}
+
+.succescriteria-text li::before {
+    content: "▪";
+    font-size: 20px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.succescriteria_photo {
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin-top: 9px;
+  margin-left: calc(80% - 50vw)
+}
+
+
+.voorkennis-text {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+
+    min-height: 75px;
+    height: auto;
+
+    box-sizing: border-box;
+
+
+    align-items: center;
+
+    padding: 15px 25px;
+    font-size: 15px;
+
+    color: black;
+
+    overflow-wrap: break-word;
+}
+
+.voorkennis-text > ul {
+  font-size: 17px;
+  margin-left: 635px;
+  list-style: none;
+  align-items: center;
+
+}
+
+.voorkennis-text > span {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  margin-left: 655px;
+  font-weight: 510px;
+  font-size: 16px;
+}
+
+.voorkennis_photo {
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin-top: 9px;
+  margin-left: 547px;
+}
+
+.instructie-text {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+
+    min-height: 75px;
+    height: auto;
+
+    background: #ececec;
+    box-sizing: border-box;
+
+
+    align-items: center;
+
+    padding: 15px 25px;
+    font-size: 15px;
+    font-weight: 510px;
+
+    color: black;
+
+    overflow-wrap: break-word;
+}
+
+.instructie-text > ul {
+  font-size: 17px;
+  margin-left: 635px;
+  list-style: none;
+  align-items: center;
+
+}
+
+.instructie-text > span {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  margin-left: 655px;
+  font-weight: 510px;
+  font-size: 16px;
+}
+
+.instructie_photo {
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin-top: 9px;
+  margin-left: 547px;
+}
+
+.bronnen-text {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+
+    min-height: 75px;
+    height: auto;
+
+    background: #ececec;
+    box-sizing: border-box;
+
+
+    align-items: center;
+
+    padding: 15px 25px;
+    font-size: 15px;
+    font-weight: 510px;
+
+    color: black;
+
+    overflow-wrap: break-word;
+}
+
+.bronnen-text > ul {
+  font-size: 17px;
+  margin-left: 635px;
+  list-style: none;
+  align-items: center;
+
+}
+
+.bronnen-text > span {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  margin-left: 655px;
+  font-weight: 510px;
+  font-size: 16px;
+}
+
+.bronnen_photo {
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin-top: 9px;
+  margin-left: 547px;
+}
+
+.classroom-text {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+
+    min-height: 75px;
+    height: auto;
+
+    background: #ececec;
+    box-sizing: border-box;
+
+
+    align-items: center;
+
+    padding: 15px 25px;
+    font-size: 15px;
+    font-weight: 510px;
+
+    color: black;
+
+    overflow-wrap: break-word;
+}
+
+.classroom-text > ul {
+  font-size: 17px;
+  margin-left: 635px;
+  list-style: none;
+  align-items: center;
+
+}
+
+.classroom-text > span {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  margin-left: 655px;
+  font-weight: 510px;
+  font-size: 16px;
+}
+
+.classroom_photo {
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin-top: 9px;
+  margin-left: 547px;
+}
+
+
+/*background*/
+.bg-grey {
+  background: #ececec;
+}
+
+.bg-white {
+  background: white;
+}
