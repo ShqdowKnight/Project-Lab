@@ -21,22 +21,6 @@ The project is built using:
 
 css, js, json
 
-## Getting Started
+## Getting Started / installation
 
-
-
-### Requirements
-
-Make sure you have the following installed:
-
-- Node.js
-- npm
-- [Other requirements]
-
-### Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/USERNAME/REPOSITORY.git
-cd REPOSITORY
+Currently still just progress project instructions will come later
