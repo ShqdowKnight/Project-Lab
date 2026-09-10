@@ -11,7 +11,7 @@ This project is currently under development. Features and parts of the applicati
 The platform is designed in an effort to give students options on how they want their site to look.
 
 ## Change Log
-####V0.1 
+#### V0.1 
 - Creation
 - Bare minimum (just the same data in a new suit)
 
