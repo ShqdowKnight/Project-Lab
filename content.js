@@ -72,7 +72,6 @@ const deelprojecten_raw = await fetch(
     }
   }
 );
-
 const deelprojecten = await deelprojecten_raw.json();
 for (let i = 0; i < deelprojecten.data.length; i++) {
 
@@ -142,7 +141,10 @@ document.querySelector(".sidebar ul").addEventListener("click", async (event) =>
           <div class="succescriteria-text __BG__">
             <img src="${succescriteria_photo}" class="succescriteria_photo"><span><b>Succescriteria:</b></span>
             <ul>
-              ${labdoelen.map(l => `<li><i>${l.omschrijving.trim()}&nbsp;(${l.lpd_code.trim()})</i></li>`).join("")}
+              ${labdoelen.map(l => `
+                <li onclick="this.style.textDecoration = this.style.textDecoration === 'line-through' ? 'none' : 'line-through'" style="cursor: pointer; user-select: none;">
+                  <i>${l.omschrijving.trim()}&nbsp;(${l.lpd_code.trim()})</i>
+                </li>`).join("")}
             </ul>
           </div>
         `);
