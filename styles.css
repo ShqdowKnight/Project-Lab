@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+:root{
+  --text-top-margin: 0.5vh;
+  --photo-size: 3vw;
+  --size-font-size: 0.6vw;
+  --margin-left: clamp(0px, calc(80% - 55vw), 5000px);
+  --photo-offset: 3vw;
+  --photo-title-offset: 3vw + 10px;
+}
 
 .sidebar,
 .sidebar button {
@@ -136,10 +144,10 @@ body {
 }
 /*Header Bars*/
 .header-bar {
-    margin-left: calc(330px - 3vw);
-    width: calc(100% - (330px - 3vw));
+    margin-left: 250px;
+    width: calc(100% - 250px);
 
-    min-height: 100px;
+    min-height: 5vw;
     height: auto;
 
     background: #6fb3f2;
@@ -151,18 +159,18 @@ body {
     padding: 15px 25px;
 
     color: white;
-    font-size: 26px;
+    font-size: calc(var(--size-font-size) + 10px);
     font-weight: 510;
 
     overflow-wrap: break-word;
 }
 .header-bar span {
-  margin-left: calc(80% - 50vw);
+  margin-left: var(--margin-left);
 }
 
 .succescriteria-text {
-    margin-left: calc(330px - 3vw);
-    width: calc(100% - (330px - 3vw));
+    margin-left: 250px;
+    width: calc(100% - 250px);
 
     min-height: 75px;
     height: auto;
@@ -174,7 +182,7 @@ body {
     align-items: center;
 
     padding: 15px 25px;
-    font-size: 15px;
+    font-size: var(--size-font-size);
 
     color: black;
 
@@ -182,33 +190,31 @@ body {
 }
 
 .succescriteria-text > ul {
-  font-size: 17px;
-  margin-left: calc(85% - 50vw);
+  font-size: calc(var(--size-font-size) + 1px);
+  margin-left: calc(var(--margin-left) + var(--photo-offset));
   list-style: none;
   align-items: center;
 }
 
 .succescriteria-text > span {
   display: block;
-  margin-top: 15px;
-  margin-bottom: -15px;
-  margin-left: calc(85% - 50vw);
-  font-size: 16px;
+  margin-top: var(--text-top-margin);
+  margin-left: calc(var(--margin-left) + var(--photo-title-offset));
 }
 
 .succescriteria-text li::before {
     content: "▪";
-    font-size: 20px;
+    font-size: calc(var(--size-font-size) + 5px);
     margin-right: 12px;
     flex-shrink: 0;
 }
 
 .succescriteria_photo {
   float: left;
-  width: 70px;
-  height: 70px;
-  margin-top: 9px;
-  margin-left: calc(80% - 50vw)
+  width: var(--photo-size);
+  height: auto;
+  margin-top: var(--text-top-margin);
+  margin-left: var(--margin-left);
 }
 
 
@@ -225,7 +231,7 @@ body {
     align-items: center;
 
     padding: 15px 25px;
-    font-size: 15px;
+    font-size: var(--size-font-size);
 
     color: black;
 
@@ -233,8 +239,7 @@ body {
 }
 
 .voorkennis-text > ul {
-  font-size: 17px;
-  margin-left: 635px;
+  margin-left: calc(var(--margin-left) + var(--photo-offset));
   list-style: none;
   align-items: center;
 
@@ -242,19 +247,17 @@ body {
 
 .voorkennis-text > span {
   display: block;
-  margin-top: 15px;
-  margin-bottom: -15px;
-  margin-left: 655px;
-  font-weight: 510px;
-  font-size: 16px;
+  margin-top: var(--text-top-margin);
+  margin-left: calc(var(--margin-left) + var(--photo-title-offset));
+  font-size: calc(var(--size-font-size) + 1px);
 }
 
 .voorkennis_photo {
   float: left;
-  width: 70px;
-  height: 70px;
-  margin-top: 9px;
-  margin-left: 547px;
+  width: var(--photo-size);
+  height: auto;
+  margin-top: var(--text-top-margin);
+  margin-left: var(--margin-left);
 }
 
 .instructie-text {
@@ -271,8 +274,7 @@ body {
     align-items: center;
 
     padding: 15px 25px;
-    font-size: 15px;
-    font-weight: 510px;
+    font-size: var(--size-font-size);
 
     color: black;
 
@@ -280,8 +282,7 @@ body {
 }
 
 .instructie-text > ul {
-  font-size: 17px;
-  margin-left: 635px;
+  margin-left: calc(var(--margin-left) + var(--photo-offset));
   list-style: none;
   align-items: center;
 
@@ -289,19 +290,17 @@ body {
 
 .instructie-text > span {
   display: block;
-  margin-top: 15px;
-  margin-bottom: -15px;
-  margin-left: 655px;
-  font-weight: 510px;
-  font-size: 16px;
+  margin-top: var(--text-top-margin);
+  margin-left: calc(var(--margin-left) + var(--photo-title-offset));
+  font-size: calc(var(--size-font-size) + 1px);
 }
 
 .instructie_photo {
   float: left;
-  width: 70px;
-  height: 70px;
-  margin-top: 9px;
-  margin-left: 547px;
+  width: var(--photo-size);
+  height: auto;
+  margin-top: var(--text-top-margin);
+  margin-left: var(--margin-left);
 }
 
 .bronnen-text {
@@ -318,8 +317,7 @@ body {
     align-items: center;
 
     padding: 15px 25px;
-    font-size: 15px;
-    font-weight: 510px;
+    font-size: var(--size-font-size);
 
     color: black;
 
@@ -327,8 +325,7 @@ body {
 }
 
 .bronnen-text > ul {
-  font-size: 17px;
-  margin-left: 635px;
+  margin-left: calc(var(--margin-left) + var(--photo-offset));
   list-style: none;
   align-items: center;
 
@@ -336,19 +333,17 @@ body {
 
 .bronnen-text > span {
   display: block;
-  margin-top: 15px;
-  margin-bottom: -15px;
-  margin-left: 655px;
-  font-weight: 510px;
+  margin-top: var(--text-top-margin);
+  margin-left: calc(var(--margin-left) + var(--photo-title-offset));
   font-size: 16px;
 }
 
 .bronnen_photo {
   float: left;
-  width: 70px;
-  height: 70px;
-  margin-top: 9px;
-  margin-left: 547px;
+  width: var(--photo-size);
+  height: auto;
+  margin-top: var(--text-top-margin);
+  margin-left: var(--margin-left);
 }
 
 .classroom-text {
@@ -365,8 +360,7 @@ body {
     align-items: center;
 
     padding: 15px 25px;
-    font-size: 15px;
-    font-weight: 510px;
+    font-size: var(--size-font-size);
 
     color: black;
 
@@ -374,8 +368,7 @@ body {
 }
 
 .classroom-text > ul {
-  font-size: 17px;
-  margin-left: 635px;
+  margin-left: calc(var(--margin-left) + var(--photo-offset));
   list-style: none;
   align-items: center;
 
@@ -383,19 +376,17 @@ body {
 
 .classroom-text > span {
   display: block;
-  margin-top: 15px;
-  margin-bottom: -15px;
-  margin-left: 655px;
-  font-weight: 510px;
-  font-size: 16px;
+  margin-top: var(--text-top-margin);
+  margin-left: calc(var(--margin-left) + var(--photo-title-offset));
+  font-size: calc(var(--size-font-size) + 1px);
 }
 
 .classroom_photo {
   float: left;
-  width: 70px;
-  height: 70px;
-  margin-top: 9px;
-  margin-left: 547px;
+  width: var(--photo-size);
+  height: auto;
+  margin-top: var(--text-top-margin);
+  margin-left: var(--margin-left);
 }
 
 
