@@ -13,6 +13,7 @@
                 "https://project.apps4lab.be/*"
             ],
             "js": [
+                "purify.min.js",
                 "content.js"
             ],
             "css": [
