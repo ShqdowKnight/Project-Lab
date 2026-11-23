@@ -1,25 +1,27 @@
 {
     "manifest_version": 3,
     "name": "Project@Lab",
-    "description": "An improvemnt on the Project site app",
+    "description": "An improvement on the Project site app",
     "version": "1.0.0",
+    "permissions": ["activeTab", "scripting"],
     "web_accessible_resources": [{
-        "resources": ["pictures/lab_logo.png","pictures/bronnen.png","pictures/classroom.png","pictures/instructie.png","pictures/succescriteria.png","pictures/voorkennis.png"],
+        "resources": [
+            "pictures/lab_logo.png",
+            "pictures/bronnen.png",
+            "pictures/classroom.png",
+            "pictures/instructie.png",
+            "pictures/succescriteria.png",
+            "pictures/voorkennis.png"
+        ],
         "matches": ["https://project.apps4lab.be/*"]
     }],
-    "content_scripts": [
-        {
-            "matches": [
-                "https://project.apps4lab.be/*"
-            ],
-            "js": [
-                "purify.min.js",
-                "content.js"
-            ],
-            "css": [
-                "styles.css"
-            ],
-            "run_at": "document_end"
-        }
-    ]
+    "content_scripts": [{
+        "matches": ["https://project.apps4lab.be/*"],
+        "js": ["purify.min.js", "content.js"],
+        "css": ["styles.css"],
+        "run_at": "document_end"
+    }],
+    "browser_specific_settings": {
+        "gecko": { "id": "projectsitee@shqdow.inc" }
+   }
 }
